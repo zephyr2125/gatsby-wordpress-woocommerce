@@ -10,7 +10,7 @@
 
 ## 🚀 Quick start
 
-Create new project: <code> gatsby new gatsby-wordpress https://github.com/zephyr2125/gatsby-wordpress </code> <br>
+Create new project: <code> gatsby new gatsby-wordpress-woocommerce https://github.com/zephyr2125/gatsby-wordpress-woocommerce </code> <br>
 Then: <br>
 <code> cd gatsby-wordpress </code><br>
 <code> gatsby develop </code><br>
@@ -24,28 +24,8 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
     ├── node_modules
     ├── src
-        ├── assets
-            ├── fonts
-            ├── images
-            ├── scss
-                ├── components
-                    ├── header.scss
-                    ├── footer.scss
-                ├── global
-                ├── main.scss
-    ├── components
-        ├── bio.js
-        ├── seo.js
-        ├── header
-            ├── index.js
-        ├── footer
-            ├── index.js
     ├── layouts
-        ├── index.js
-        ├── style.scss
-    ├── pages
-        ├── 404.js
-        ├── index.js
+    ├── pages 
     ├── sass
     ├── templates
     ├── .gitignore
