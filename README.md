@@ -12,7 +12,7 @@
 
 Create new project: <code> gatsby new gatsby-wordpress-woocommerce https://github.com/zephyr2125/gatsby-wordpress-woocommerce </code> <br>
 Then: <br>
-<code> cd gatsby-wordpress </code><br>
+<code> cd gatsby-wordpress-woocommerce </code><br>
 <code> gatsby develop </code><br>
 
 Build: <br>
