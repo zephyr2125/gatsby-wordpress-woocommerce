@@ -1,8 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "../assets/scss/main.scss";
-import Header from "../components/header/header";
-import Footer from "../components/footer/footer";
+/**
+ * Layout component contains header and footer
+ *
+ * @package gatsby-wordpress-theme
+ */
+
+import React from "react"
+import PropTypes from "prop-types"
+
+import '../sass/common.scss';
+
+import Header from "../components/header";
+import Footer from "../components/footer";
+import { AppProvider } from "../components/context/AppContext";
 
 import {
   ApolloClient,
@@ -32,31 +41,27 @@ const authLink = setContext((_, { headers }) => {
   }
 });
 
-
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache()
 });
+
 const Layout = ({ children }) => {
   return (
+    <AppProvider>
       <ApolloProvider client={client}>
-        <div className="site-main">
-          <div className="container_site">
-            <header id='site__header'>
-              <Header />
-            </header>
-            <main className="main">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </div>
+        <>
+          <Header />
+          <main className="main-container ahihi">{children}</main>
+          <Footer />
+        </>
       </ApolloProvider>
+    </AppProvider>
   )
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
 export default Layout

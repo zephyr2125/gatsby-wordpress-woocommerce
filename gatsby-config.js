@@ -21,11 +21,12 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
-        url:
-          process.env.GATSBY_URL || `${process.env.GATSBY_URL}`,
-          hostingWPCOM: false,
-          useACF: true,
-          acfOptionPageIds: [],
+        url: process.env.GATSBY_URL || `${process.env.GATSBY_URL}`,
+        schema: {
+          perPage: 20, // currently set to 100
+          requestConcurrency: 5, // currently set to 15
+          previewRequestConcurrency: 2, // currently set to 5
+        }
       },
     },
     {
