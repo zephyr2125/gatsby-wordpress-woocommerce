@@ -3,7 +3,7 @@
  * @see https://www.gatsbyjs.org/docs/gatsby-config/
  * @author Zephyr
  * @since 2022-04-21
- * @link https://github.com/zephyr2125/gatsby-wordpress
+ * @link https://github.com/zephyr2125/gatsby-wordpress-woocommerce
  */
  require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
